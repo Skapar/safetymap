@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-	<title>Document</title>
+	<title>Map</title>
 	<link href="{% static 'css/font-awesome.min.css'%}" rel="stylesheet" />
 	<link href="{% static 'css/style.css'%}" rel="stylesheet" />
 	<link href="{% static 'css/modal-style.css'%}" rel="stylesheet" />
@@ -20,7 +20,7 @@
 </head>
 
 <body>
-	<div class="navbar"> 
+	<div class="navbar" id="navbar"> 
 		<img src="{% static 'modal-img/logot.png' %}" alt="" class="logo" >
 		<!-- <div class="selected-language"> -->
 		<!-- <img id="selected-flag" class="russia flag" src="img/modal-img/russia-flag.png" alt="">
@@ -38,7 +38,7 @@
 			<!-- Overlay content -->
 			<div class="overlay-content">
 				<!-- <h2>Floors</h2> -->
-				<button class="accordion">5 floor</button>
+				<button class="accordion">5</button>
 				<div class="panel">
 					<div class="floor-details">
 						<div class="floor-details-container">
@@ -103,7 +103,7 @@
 						</div>
 					</div>
 				</div>
-				<button class="accordion">Раздел 4</button>
+				<button class="accordion">4</button>
 				<div class="panel">
 					<div class="floor-details">
 						<div class="floor-details-container">
@@ -168,7 +168,7 @@
 									</div>
 									<div class="room">
 										<div class="circle eight"></div>
-										<div class="room-name eighthroom_fourthfloor">
+										<div class="room-name eigthroom_fourthfloor">
 											<h5 class="room-title">RECTOR</h5>
 											<div class="room-locate tolebifour">Tole bi, 4th floor</div>
 										</div>
@@ -188,7 +188,7 @@
 						</div>
 					</div>					
 				</div>
-				<button class="accordion">Раздел 3</button>
+				<button class="accordion">3</button>
 				<div class="panel">
 					<div class="floor-details">
 						<div class="floor-details-container">
@@ -242,7 +242,7 @@
 						</div>
 					</div>
 				</div>
-				<button class="accordion">Раздел 2</button>
+				<button class="accordion">2</button>
 				<div class="panel">
 					<div class="floor-details">
 						<div class="floor-details-container">
@@ -314,7 +314,7 @@
 								</div>
 								<div class="room">
 									<div class="circle nine"></div>
-									<div class="room-name nineth_secondfloor">
+									<div class="room-name ninth_secondfloor">
 										<h5>DEPARTMENT OF STUDENT<br/>AFFAIRS</h5>
 										<div class="room-locate kazybektwo">Kazybek bi, 2nd floor</div>
 									</div>
@@ -325,7 +325,7 @@
 						</div>
 					</div>
 				</div>
-				<button class="accordion">Раздел 1</button>
+				<button class="accordion">1</button>
 				<div class="panel">
 					<div class="floor-details">
 						<div class="floor-details-container">
@@ -334,7 +334,7 @@
 								<div class="floor-details">
 									<div class="room">
 										<div class="circle one"></div>
-										<div class="room-name">
+										<div class="room-name first_firstfloor">
 											<h5>CAREER AND ALUMNI<br/>CENTER</h5>
 											<div class="room-locate tolebione">Tole bi, 1st floor</div>
 										</div>
@@ -342,7 +342,7 @@
 									</div>
 									<div class="room">
 										<div class="circle two"></div>
-										<div class="room-name">
+										<div class="room-name second_firstfloor">
 											<h5>PSYCHOLOGIST'S OFFICE</h5>
 											<div class="room-locate tolebione">Tole bi, 1st floor</div>
 										</div>
@@ -350,7 +350,7 @@
 									</div>
 									<div class="room">
 										<div class="circle three"></div>
-										<div class="room-name">
+										<div class="room-name third_firstfloor">
 											<h5>DEPARTMENT OF MARKETING<br/>AND RECRUITING</h5>
 											<div class="room-locate tolebione">Tole bi, 1nd floor</div>
 										</div>
@@ -358,7 +358,7 @@
 									</div>
 									<div class="room">
 										<div class="circle four"></div>
-										<div class="room-name">
+										<div class="room-name fourth_firstfloor">
 											<h5>ADMISSION COMMITTEE</h5>
 											<div class="room-locate tolebione">Tole bi, 1st floor</div>
 										</div>
@@ -366,7 +366,7 @@
 									</div>
 									<div class="room">
 										<div class="circle five"></div>
-										<div class="room-name">
+										<div class="room-name fifth_firstfloor">
 											<h5>OCCUPATIONAL HEALTH<br/>AND SAFETY ENGINEER</h5>
 											<div class="room-locate tolebione">Tole bi, 1st floor</div>
 										</div>
@@ -374,7 +374,7 @@
 									</div>
 									<div class="room">
 										<div class="circle six"></div>
-										<div class="room-name">
+										<div class="room-name sixth_firstfloor">
 											<h5>BUSINESS DEVELOPMENT <br/>SERVICE</h5>
 											<div class="room-locate tolebione">Panfilov, 1st floor</div>
 										</div>
@@ -382,7 +382,7 @@
 									</div>
 									<div class="room">
 										<div class="circle seven"></div>
-										<div class="room-name">
+										<div class="room-name seventh_firstfloor">
 											<h5>SCIENCE LIBRARY</h5>
 											<div class="room-locate abone">Abylai Khan, 1st floor</div>
 										</div>
@@ -391,7 +391,7 @@
 									</div>
 									<div class="room">
 										<div class="circle eight"></div>
-										<div class="room-name">
+										<div class="room-name eight_firstfloor">
 											<h5>DEPARTMENT OF<br/>INFORMATION <br/>TECHNOLOGIES</h5>
 											<div class="room-locate abone">Abylai Khan, 1st floor</div>
 										</div>
@@ -399,7 +399,7 @@
 									</div>
 									<div class="room">
 										<div class="circle ten"></div>
-										<div class="room-name">
+										<div class="room-name ninth_firstfloor">
 											<h5>SCHOOL OF MATERIALS<br/>SCIENCE AND GREEN</h5>
 											<div class="room-locate panfilovone">Panfilov, 1st floor <span>Panfilov, 2nd floor</span></div>
 										</div>
@@ -408,7 +408,7 @@
 									</div>
 									<div class="room">
 										<div class="circle nine"></div>
-										<div class="room-name">
+										<div class="room-name tenth_firstfloor">
 											<h5>COWORKING №1 HALYK<br/>ACADEMY</h5>
 											<div class="room-locate kazybekone">Kazybek bi, 1st floor</div>
 										</div>
@@ -420,7 +420,7 @@
 						</div>
 					</div>
 				</div>
-				<button class="accordion">Раздел 0</button>
+				<button class="accordion">0</button>
 				<div class="panel">
 					<div class="floor-details">
 						<div class="floor-details-container">
@@ -428,23 +428,23 @@
 							<div class="floor-details">
 								<div class="room">
 									<div class="circle one"></div>
-									<div class="room-name">
-										<h5 class="security">SECURITY</h5>
+									<div class="room-name first_zerothfloor">
+										<h5 class="">SECURITY</h5>
 										<div class="room-locate tolebizero">Tole bi, 0th floor</div>
 									</div>
 									<div class="room-number">95</div>
 								</div>
 								<div class="room">
 									<div class="circle two"></div>
-									<div class="room-name">
+									<div class="room-name second_zerothfloor">
 										<h5>CANTEEN</h5>
-										<div class="room-locate tolebizero">Tole bi, 0th floor</div>
+										<div class="room-locate tolebizero" >Tole bi, 0th floor</div>
 									</div>
 									<div class="room-number"><img class="canteen1" height="30px" width="30px" alt="" src="{% static 'img/icons/settings.png' %}" /></div>
 								</div>
 								<div class="room">
 									<div class="circle three"></div>
-									<div class="room-name">
+									<div class="room-name third_zerothfloor">
 										<h5>CO-WORKING</h5>
 										<div class="room-locate tolebizero">Tole bi, 0th floor</div>
 									</div>
@@ -452,7 +452,7 @@
 								</div>
 								<div class="room">
 									<div class="circle four"></div>
-									<div class="room-name">
+									<div class="room-name fourth_zerothfloor">
 										<h5>BUFFET</h5>
 										<div class="room-locate tolebizero">Tole bi, 0th floor</div>
 									</div>
@@ -460,7 +460,7 @@
 								</div>
 								<div class="room">
 									<div class="circle five"></div>
-									<div class="room-name">
+									<div class="room-name fifth_zerothfloor">
 										<h5>GAME LAB</h5>
 										<div class="room-locate tolebizero">Tole bi, 0th floor</div>
 									</div>
@@ -482,29 +482,58 @@
 				<div class="markup"> <img alt="" src="{% static 'img/icons/markups.png' %}" /> </div>
 			</div>
 			<div class="floor-image-container"> 
-				<img alt="" class="imgfive" src="{% static 'img/icons/fivefloor.png' %}" /> 
-				<img alt="" class="" src="{% static 'img/icons/fourfloor.png' %}" />
-				<img alt="" class="" src="{% static 'img/icons/threefloor.png' %}" /> 
-				<img alt="" class="" src="{% static 'img/icons/twofloor.png' %}" /> 
-				<img alt="" class="" src="{% static 'img/icons/onefloor.png' %}" />
-				<div class="zerothfloor">
-					<div class="tolebi_zero">T</div>
-					<div class="panfilova_zero modalBtn">Pp</div>
-					<img alt="" class="" src="{% static 'img/floors/zero.png' %}" />
-				</div>
-			</div>  
-		</div>
+					<div class="fivefl">
+						<div class="tolebi_five modalBtn" data-url="{% static 'img-videosingle/tolebi/TOLEBI5THVR12.png' %}"></div>
+						<img alt="" class="imgfive" src="{% static 'img/floors/five.png' %}" /> 
+					</div>
+					<div class="fourfl">
+						<div class="tolebi_four modalBtn" data-url="{% static 'img-videosingle/tolebi/TOLEBI4THVR1 2.png' %}"></div>
+						<div class="panfilova_four modalBtn" data-url="{% static 'img-videosingle/panfilova/PANFILOV4THVR1.png' %}"></div>
+						<div class="ab_four modalBtn" data-url="{% static 'img-videosingle/abylk/ABYLAIKHAN4THVR1_.png' %}"></div>
+						<div class="kb_four modalBtn" data-url="{% static 'img-videosingle/kazybekbi/KAZYBEKBI4THVR1.png' %}"></div>
+						<img alt="" class="" src="{% static 'img/floors/four.png' %}" /> 
 
+					</div>
+					<div class="thirdfl">
+						<div class="tolebi_three modalBtn" data-url="{% static 'img-videosingle/tolebi/TOLEBI3RDVR1 5.png' %}"></div>
+						<div class="panfilova_three modalBtn" data-url="{% static 'img-videosingle/panfilova/PANFILOV3RDVR1.png' %}"></div>
+						<div class="ab_three modalBtn" data-url="{% static 'img-videosingle/abylk/ABYLAIKHAN3RDVR1_.png' %}"></div>
+						<img alt="" class="" src="{% static 'img/floors/three.png' %}" />
+
+					</div>
+					<div class="secondfl">
+						<div class="tolebi_two modalBtn" data-url="{% static 'img-videosingle/tolebi/TOLEBI2NDVR1_ 2.png' %}"></div>
+						<div class="panfilova_two modalBtn" data-url="{% static 'img-videosingle/panfilova/PANFILOV2NDVR1.png' %}"></div>
+						<div class="ab_two modalBtn" data-url="{% static 'img-videosingle/abylk/ABYLAIKHAN2NDVR1_.png' %}"></div>
+						<div class="kb_two modalBtn" data-url="{% static 'img-videosingle/kazybekbi/KAZYBEKBI2NDVR1.png' %}"></div>
+						<img alt="" class="" src="{% static 'img/floors/twof.png' %}" /> 
+					</div>
+					<div class="firstfloor">
+						<div class="tolebi_one modalBtn" data-url="{% static 'img-videosingle/tolebi/TOLEBI1STVR1_ 2.png' %}"></div>
+						<div class="panfilova_one modalBtn" data-url="{% static 'img-videosingle/panfilova/PANFILOV1STVR1.png' %}"></div>
+						<div class="ab_one modalBtn" data-url="{% static 'img-videosingle/abylk/ABYLAIKHAN1STVR1_.png' %}"></div>
+						<div class="kb_one modalBtn" data-url="{% static 'img-videosingle/kazybekbi/KAZYBEKBI1STVR1.png' %}"></div>
+						<img alt="" class="" src="{% static 'img/floors/one.png' %}" />  
+					</div>
+					<div class="zerothfloor">
+						<div class="tolebi_zero modalBtn" data-url="{% static 'img-videosingle/tolebi/TOLEBI0THVR1_ 3.png' %}">AA</div>
+						<div class="panfilova_zero modalBtn" data-url="{% static 'img-videosingle/panfilova/PANFILOV0THVR1.png' %}"></div>
+						<div class="ab_zero modalBtn" data-url="{% static 'img-videosingle/abylk/ABYLAIKHAN0THVR1_.png' %}"></div>
+						<img alt="" class="" src="{% static 'img/floors/zero.png' %}" />
+					</div>
+			</div>
 		</div>
-		</div>
+	</div>
 		<!-- <button class="modalBtn kab4"><img alt="" src="{% static 'img/Pointer.png' %}" /></button> -->
-		<div class="modal" id="myModal" data-url="{{ modal_image_url }}">
+		<div class="modal" id="myModal" >
 			<div class="modal-content"> <span class="close">×</span>
-				<div id="modalBody"></div>
+				<div id="modalBody">
+		
+				</div>
 			</div>
 			<script src="{% static 'js/index.js' %}" defer></script>
 		</div>
-
+		
 
 		<!-- </div> -->
 		<footer>
@@ -524,10 +553,16 @@
 				<div class="ft-bottom"> <span>Copyright © 2023 All Rights Reserved by Almavalley </span> </div>
 			</div>
 		</footer>
-		<script src="{% static 'js/jquery.min.js' %}"></script>
-		<script src="{% static 'js/materialize.min.js' %}"></script>
+		<!-- <script src="{% static 'js/jquery.min.js' %}"></script> -->
+		<!-- <script src="{% static 'js/materialize.min.js' %}"></script> -->
 		<script src="{% static 'js/slick.min.js' %}"></script>
-		<script src="{% static 'js/custom.js' %}"></script>
+		<!-- <script src="{% static 'js/custom.js' %}"></script> -->
+		<script>
+			const observer = new MutationObserver(() => {
+  			updateLanguageList();
+  			updateSelectedFlag();
+			});
+		</script>
 	</div>
 </body>
 </html>

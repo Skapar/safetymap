@@ -1,16 +1,16 @@
+
 var modal = document.getElementById("myModal");
 var btns = document.querySelectorAll(".modalBtn");
 var span = document.getElementsByClassName("close")[0];
+var body = document.body;
+var navbar = document.getElementById("navbar")
 
-btns.forEach(btn => {
-    btn.onclick = function() {
-        fetchPageAndDisplayInModal("/video/"); // replace with your URL
-        modal.style.display = "block";
-    }
-});
+
 
 span.onclick = function() {
     modal.style.display = "none";
+    body.style.overflow = "auto";
+    navbar.style.display = "flex"
 }
 
 window.onclick = function(event) {
@@ -20,27 +20,42 @@ window.onclick = function(event) {
 }
 
 function fetchPageAndDisplayInModal(pageUrl) {
+    let imageUrl; 
+    
+    const activeBtn = document.querySelector(".modalBtn.active");
+    
+    if (activeBtn) {
+        imageUrl = activeBtn.getAttribute('data-url');
+    }
+
     fetch(pageUrl)
     .then(response => response.text())
     .then(data => {
         document.getElementById('modalBody').innerHTML = data;
-        // Add this to update the language switcher after the content has been added to the modal
-        updateLanguageList();
-        updateSelectedFlag();
         const img = document.querySelector('.video-iframe').querySelector("img");
-        const url = modal.dataset.url;
-        img.setAttribute('src', url);
+        if (imageUrl) {
+            img.setAttribute('src', imageUrl); 
+        }
+        
     })
     .catch((error) => {
         console.error('Error:', error);
     });
 }
 
-// Initialize a MutationObserver
-const observer = new MutationObserver(() => {
-  updateLanguageList();
-  updateSelectedFlag();
+btns.forEach(btn => {
+    btn.onclick = function() {
+        const activeBtn = document.querySelector(".modalBtn.active");
+        if (activeBtn) {
+            activeBtn.classList.remove("active");
+        }
+        btn.classList.add("active");
+        body.style.overflow = "hidden";
+        navbar.style.display = "none"
+
+        fetchPageAndDisplayInModal("/video/");
+        modal.style.display = "block";
+    }
 });
 
-// Start observing "modalBody" for child list changes
 observer.observe(document.getElementById('modalBody'), { childList: true });
