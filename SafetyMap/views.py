@@ -10,7 +10,7 @@ def index(request):
 def video_single(request):
     return render(request, 'video-single.html')
 
-def mainn(request):
+def flag(request):
     return render(request, 'index.html')
 
 def redirected(request):
@@ -21,5 +21,8 @@ def kz(request):
 
 def ru(request):
     return render(request, 'ru_page.html')
+
+def mainn(request):
+    return render(request, 'form.html')
 
 

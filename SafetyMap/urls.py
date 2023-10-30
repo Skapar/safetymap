@@ -29,6 +29,8 @@ urlpatterns = [
     path('map/', views.index, name='mapi'),
     path('video/', views.video_single, name='video'),
 
+    path('flag/', views.flag, name='flag'),
+
 ]
 
 

@@ -1,0 +1,136 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container.page-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            background: linear-gradient(135deg, #004d7a, #000);
+            color: #ffffff;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        .content-section {
+            width: 100%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            transition: background 0.3s;
+        }
+
+        .form-field:focus {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .submit-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #0066a1;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background: #0082c3;
+        }
+
+        .consent-box {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .consent-box label {
+            margin-left: 10px;
+            font-size: 0.9em;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .consent-box input[type="checkbox"] {
+            cursor: pointer;
+        }
+
+        @media (min-width: 768px) { /* Tablet */
+            .content-section {
+                padding: 40px;
+            }
+        }
+
+        @media (min-width: 1024px) { /* Desktop */
+            .submit-button {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container page-container">
+        <header>
+            <h1>Form Design</h1>
+        </header>
+        <section class="content-section">
+            <form id="sheetdb-form"  action="https://sheetdb.io/api/v1/wuszgue4p588w" method="post">
+                ID: <input class="form-field" name="data[id]">
+                Name: <input class="form-field" name="data[name]">
+                Age: <input class="form-field" name="data[surname]">
+                <div class="consent-box">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">I consent to data processing.</label>
+                </div>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </section>
+    </div>
+    <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            window.location.href = "{% url 'flag' %}";
+          });
+        });
+    </script>
+</body>
+</html>
