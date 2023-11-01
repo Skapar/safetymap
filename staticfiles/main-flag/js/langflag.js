@@ -1,12 +1,13 @@
+console.log("adada")
 let flags = ['en', 'kz', 'ru'];
 let currentIndex = 0;
-let staticUrl = "SafetyMap/static/main-flag/flags-gif/";
+let staticUrl = "main-flag/flags-gif";
 
 function switchFlag(direction) {
     currentIndex += direction;
     if (currentIndex < 0) currentIndex = flags.length - 1;
     if (currentIndex >= flags.length) currentIndex = 0;
-    document.getElementById("flag").src = staticUrl + "/" flags[currentIndex] + ".gif";
+    document.getElementById("flag").src = staticUrl + "/" + flags[currentIndex] + ".gif";
 }
 
 function redirectToPage() {
