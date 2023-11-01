@@ -1,7 +1,7 @@
 console.log("adada")
 let flags = ['en', 'kz', 'ru'];
 let currentIndex = 0;
-let staticUrl = "main-flag/flags-gif";
+let staticUrl = "{% static 'main-flag/flags-gif' %}";
 
 function switchFlag(direction) {
     currentIndex += direction;
