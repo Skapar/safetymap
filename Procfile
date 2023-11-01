@@ -1,1 +1,1 @@
-web: gunicorn yourprojectname.wsgi:application --log-file -
+web: gunicorn SafetyMap.wsgi:application --log-file -
